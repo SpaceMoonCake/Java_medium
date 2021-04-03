@@ -2,8 +2,7 @@ package HomeWork04;
 
 import javax.swing.*;
 import java.awt.*;
-//import java.awt.event.ActionEvent;
-//import java.awt.event.ActionListener;
+
 
 public class MainChatWindow extends JFrame {
 
@@ -26,7 +25,6 @@ public class MainChatWindow extends JFrame {
         JPanel panelAllChat = new JPanel();
         panelAllChat.setPreferredSize(new Dimension(CHAT_WINDOW_WIDTH, CHAT_WINDOW_HEIGHT));
         panelAllChat.setBackground(Color.pink);
-        //panelAllChat.setBorder(BorderFactory.createLineBorder(Color.magenta));
         panelAllChat.setLayout(new BorderLayout());
 
         JPanel panelSendingMessages = new JPanel();
@@ -39,7 +37,7 @@ public class MainChatWindow extends JFrame {
         buttonSendingMessages.setPreferredSize(new Dimension(CHAT_WINDOW_WIDTH/6, CHAT_WINDOW_HEIGHT/10));
         buttonSendingMessages.setBackground(Color.lightGray);
         buttonSendingMessages.setDefaultCapable(true);
-        //buttonSendingMessages.requestFocusInWindow();
+
 
         JTextField textFieldForTypeMassage = new JTextField();
         textFieldForTypeMassage.setPreferredSize(new Dimension(CHAT_WINDOW_WIDTH - CHAT_WINDOW_WIDTH/4,CHAT_WINDOW_HEIGHT/10));
@@ -59,33 +57,8 @@ public class MainChatWindow extends JFrame {
         buttonSendingMessages.addActionListener(new ListenerForSendMassage(textFieldForTypeMassage,panelForAlreadySentMassages,panelAllChat));
         textFieldForTypeMassage.addActionListener(new ListenerForSendMassage(textFieldForTypeMassage,panelForAlreadySentMassages,panelAllChat));
 
-//        textFieldForTypeMassage.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                if(!textFieldForTypeMassage.getText().equals("")){
-//                    panelForAlreadySentMassages.add(panelForSendingMassage(textFieldForTypeMassage.getText()));
-//                    textFieldForTypeMassage.setText("");
-//                    panelAllChat.revalidate();
-//                }
-//            }
-//        });
-
         return panelAllChat;
     }
-
-//    private JPanel panelForSendingMassage(String textSendingMassage){
-//            JPanel panelForSendingMassage = new JPanel();
-//            panelForSendingMassage.setBackground(Color.ORANGE);
-//            panelForSendingMassage.setPreferredSize(new Dimension(CHAT_WINDOW_WIDTH / 2, CHAT_WINDOW_HEIGHT / 10));
-//            JLabel labelTextSendingMassage = new JLabel(textSendingMassage);
-//            panelForSendingMassage.add(labelTextSendingMassage);
-//            return panelForSendingMassage;
-//    }
-
-
-
-
-
 }
 
 
